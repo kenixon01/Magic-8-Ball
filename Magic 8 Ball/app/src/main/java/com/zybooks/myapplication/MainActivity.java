@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             Intent intent = new Intent(this,About.class);
             startActivity(intent);
         });
-
-        setContentView(R.layout.activity_main);
         tvResponse=findViewById(R.id.tvResponse);
         //mGame = new LightsOutGame();
         if (savedInstanceState == null) {
@@ -99,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         });
     }
-    tvGravity = new TextView[3];
+//    tvGravity = new TextView[3];
 //        tvGravity[0] = findViewById(R.id.tvGravityX);
 //        tvGravity[1] = findViewById(R.id.tvGravityY);
 //        tvGravity[2] = findViewById(R.id.tvGravityZ);

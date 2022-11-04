@@ -22,11 +22,11 @@ com.zybooks.myapplication.app-annotation-experimental-1.1.0-20 C:\Users\minix\.g
 com.zybooks.myapplication.app-cardview-1.0.0-21 C:\Users\minix\.gradle\caches\transforms-3\d4c9e45086bb311ab5f003976f396c14\transformed\cardview-1.0.0\res
 com.zybooks.myapplication.app-startup-runtime-1.1.1-22 C:\Users\minix\.gradle\caches\transforms-3\dd26f7af4232aa82cd84cd79d410c8bc\transformed\startup-runtime-1.1.1\res
 com.zybooks.myapplication.app-coordinatorlayout-1.1.0-23 C:\Users\minix\.gradle\caches\transforms-3\f911dcf170c4355b55309601278b778a\transformed\coordinatorlayout-1.1.0\res
-com.zybooks.myapplication.app-pngs-24 C:\Users\minix\AndroidStudioProjects\MyApplication\app\build\generated\res\pngs\debug
-com.zybooks.myapplication.app-resValues-25 C:\Users\minix\AndroidStudioProjects\MyApplication\app\build\generated\res\resValues\debug
-com.zybooks.myapplication.app-rs-26 C:\Users\minix\AndroidStudioProjects\MyApplication\app\build\generated\res\rs\debug
-com.zybooks.myapplication.app-packageDebugResources-27 C:\Users\minix\AndroidStudioProjects\MyApplication\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.zybooks.myapplication.app-packageDebugResources-28 C:\Users\minix\AndroidStudioProjects\MyApplication\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.zybooks.myapplication.app-merged_res-29 C:\Users\minix\AndroidStudioProjects\MyApplication\app\build\intermediates\merged_res\debug
-com.zybooks.myapplication.app-debug-30 C:\Users\minix\AndroidStudioProjects\MyApplication\app\src\debug\res
-com.zybooks.myapplication.app-main-31 C:\Users\minix\AndroidStudioProjects\MyApplication\app\src\main\res
+com.zybooks.myapplication.app-pngs-24 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\build\generated\res\pngs\debug
+com.zybooks.myapplication.app-resValues-25 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\build\generated\res\resValues\debug
+com.zybooks.myapplication.app-rs-26 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\build\generated\res\rs\debug
+com.zybooks.myapplication.app-packageDebugResources-27 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.zybooks.myapplication.app-packageDebugResources-28 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.zybooks.myapplication.app-merged_res-29 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\build\intermediates\merged_res\debug
+com.zybooks.myapplication.app-debug-30 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\src\debug\res
+com.zybooks.myapplication.app-main-31 C:\Users\minix\Documents\GitHub\Magic-8-Ball\Magic 8 Ball\app\src\main\res

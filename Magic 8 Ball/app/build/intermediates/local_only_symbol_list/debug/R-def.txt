@@ -16,6 +16,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id tvResponse
 layout about
 layout activity_main
 mipmap ic_launcher
