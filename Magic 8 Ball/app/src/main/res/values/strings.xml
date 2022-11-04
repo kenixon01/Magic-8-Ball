@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="omnipotent_billiard_ball">omnipotent\nbilliard\nball</string>
+    <string name="description">The omnipotent billiard ball app will simulate a Magic 8 Ball.\nIt will generate and read a random message as the phone is rotated in various directions.</string>
+</resources>
