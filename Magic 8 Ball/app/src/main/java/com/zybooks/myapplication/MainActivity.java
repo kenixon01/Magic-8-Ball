@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         responselist=new ArrayList<>();
         readFile();
-        backgroundPlayer = MediaPlayer.create(this, R.raw.mistsoftime4tmono);
+        backgroundPlayer = MediaPlayer.create(this, R.raw.lightwaves);
+        backgroundPlayer.setVolume(50,50);
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         manager.registerListener(this, manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                 SensorManager.SENSOR_DELAY_UI);
-        //backgroundPlayer.start();
+        backgroundPlayer.start();
 
     }
 
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onPause() {
         super.onPause();
         manager.unregisterListener(this);
-        backgroundPlayer.pause();
+        backgroundPlayer.stop();
     }
 
     @Override
@@ -216,6 +217,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
+
     void readFile() {
         try {
             InputStream is = this.getApplicationContext().getAssets().open("responses.txt");
