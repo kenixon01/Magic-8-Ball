@@ -21,6 +21,7 @@ layout about
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw lightwaves
 string app_name
 string description
 string omnipotent_billiard_ball
