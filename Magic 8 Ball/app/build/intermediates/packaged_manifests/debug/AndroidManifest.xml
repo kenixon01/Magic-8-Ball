@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zybooks.myapplication"
+    package="com.zybooks.magic8ball"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="23"
         android:targetSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -20,24 +24,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.MyApplication" >
+        android:theme="@style/Theme.Magic8BallApp" >
         <activity
-            android:name="com.zybooks.myapplication.MainActivity"
+            android:name="com.zybooks.magic8ball.about"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.zybooks.magic8ball.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.zybooks.myapplication.About"
-            android:exported="true" >
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.zybooks.myapplication.androidx-startup"
+            android:authorities="com.zybooks.magic8ball.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

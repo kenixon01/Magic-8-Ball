@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.zybooks.myapplication",
+  "applicationId": "com.zybooks.magic8ball",
   "variantName": "debug",
   "elements": [
     {

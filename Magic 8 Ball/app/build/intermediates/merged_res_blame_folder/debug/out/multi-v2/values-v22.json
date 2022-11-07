@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zybooks.myapplication.app-mergeDebugResources-27:/values-v22/values-v22.xml",
+            "outputFile": "com.zybooks.magic8ball.app-mergeDebugResources-27:/values-v22/values-v22.xml",
             "map": [
                 {
                     "source": "C:\\Users\\minix\\.gradle\\caches\\transforms-3\\5d666d306352f7fdca8df50525096bc2\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",
