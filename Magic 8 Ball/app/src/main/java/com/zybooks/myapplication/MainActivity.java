@@ -1,16 +1,24 @@
 package com.zybooks.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetFileDescriptor;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraManager;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -48,15 +56,24 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private ArrayList<String> responselist;
     private TextView tvResponse;
 
+    private CameraManager camManager;
+    private String cameraId;
+
+    private SharedPreferences prefs;
+    private SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().hide();
+
+        prefs = getSharedPreferences("shared", Context.MODE_PRIVATE);
+        editor = prefs.edit();
+
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(view -> {
-            Intent intent = new Intent(this,About.class);
-            startActivity(intent);
-        });
+        fab.setOnClickListener(this::fabClick);
         tvResponse=findViewById(R.id.tvResponse);
         //mGame = new LightsOutGame();
         if (savedInstanceState == null) {
@@ -142,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         long actualTime = System.currentTimeMillis();
 
-        if (actualTime - lastUpdate > 1000) {
+        if (actualTime - lastUpdate > 100) {
 
             Log.i(TAG, "gravity[]=" + gravity[0] + ' ' + gravity[1] + ' ' + gravity[2]);
 //            tvGravity[0].setText(String.format("%.3f", gravity[0]));
@@ -159,15 +176,60 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 Log.i(TAG, "Down");
 
                 if (!isDown) {
-                    backgroundPlayer.setVolume(0.1f, 0.1f);
+                    //backgroundPlayer.setVolume(0.1f, 0.1f);
+                    backgroundPlayer.pause();
                     popPlayer.start();
                     // Random rand=new Random();
                     //String responseString=responselist.get(rand.nextInt(20));
 
                     //tts.speak("Hello I tech forty five fifty, I am pointing down", TextToSpeech.QUEUE_FLUSH, null, null);
                     //tts.speak(responseString, TextToSpeech.QUEUE_FLUSH, null, null);
-                    tts.speak("Down", TextToSpeech.QUEUE_FLUSH, null, null);
+                    StringBuilder str=new StringBuilder();
+                    for(int i=0;i<1000;i++){
+                        str.append('O');
+                    }
+                    tts.speak("abracadabra", TextToSpeech.QUEUE_FLUSH, null, null);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        //CameraManager camManager =
+                        camManager=(CameraManager) getSystemService(Context.CAMERA_SERVICE);
+                        //String
+                        cameraId = null;
+                        try {
+                            cameraId = camManager.getCameraIdList()[0];
+                            for(int i=0;i<3;i++) {
+                                camManager.setTorchMode(cameraId, true);   //Turn ON
+
+
+                                camManager.setTorchMode(cameraId, false);
+
+                                try {
+                                    Thread.sleep(500);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        } catch (CameraAccessException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    // Vibrate for 500 milliseconds
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        // Start without a delay
+                        // Each element then alternates between vibrate, sleep, vibrate, sleep...
+//                        long[] pattern = {0, 100, 1000, 300, 200, 100, 500, 200, 100};
+                        long[] pattern = {0, 1000, 1000, 1000, 1000};
+
+                        // The '-1' here means to vibrate once, as '-1' is out of bounds in the pattern array
+                        v.vibrate(pattern, -1);
+                        //v.vibrate(VibrationEffect.createOneShot(2000, VibrationEffect.DEFAULT_AMPLITUDE));
+                    } else {
+                        //deprecated in API 26
+                        v.vibrate(2000);
+                    }
+
                     backgroundPlayer.setVolume(1.0f, 1.0f);
+                    backgroundPlayer.start();
                     isDown = true;
                     isUp = false;
                 }
@@ -242,4 +304,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
 
     }
+
+
+    public void fabClick(View view) {
+
+        Intent intent = new Intent(MainActivity.this,About.class);
+        startActivity(intent);
+
+    }
+
 }
