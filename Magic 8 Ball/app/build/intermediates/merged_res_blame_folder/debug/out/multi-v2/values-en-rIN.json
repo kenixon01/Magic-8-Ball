@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zybooks.myapplication.app-mergeDebugResources-27:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.zybooks.magic8ball.app-mergeDebugResources-27:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\minix\\.gradle\\caches\\transforms-3\\0638d9dacb5fd10604e28ec2b4d3c80b\\transformed\\core-1.8.0\\res\\values-en-rIN\\values-en-rIN.xml",

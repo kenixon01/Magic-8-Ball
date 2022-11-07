@@ -1,9 +1,9 @@
-#Fri Nov 04 20:46:36 EDT 2022
-base.2=C\:\\Users\\minix\\Documents\\GitHub\\Magic-8-Ball\\Magic 8 Ball\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
-path.2=8/classes.dex
-base.1=C\:\\Users\\minix\\Documents\\GitHub\\Magic-8-Ball\\Magic 8 Ball\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+#Sun Nov 06 23:33:32 EST 2022
+base.2=C\:\\Users\\minix\\AndroidStudioProjects\\Magic8Ball\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+path.2=12/classes.dex
+base.1=C\:\\Users\\minix\\AndroidStudioProjects\\Magic8Ball\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 path.1=0/classes.dex
-base.0=C\:\\Users\\minix\\Documents\\GitHub\\Magic-8-Ball\\Magic 8 Ball\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.0=C\:\\Users\\minix\\AndroidStudioProjects\\Magic8Ball\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
